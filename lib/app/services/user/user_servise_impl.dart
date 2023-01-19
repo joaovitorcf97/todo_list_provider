@@ -1,0 +1,22 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:todo_provider/app/repositories/user/user_repository.dart';
+import 'package:todo_provider/app/services/user/user_servise.dart';
+
+class UserServiceImpl implements UserService {
+  final UserRepository _userRepository;
+
+  UserServiceImpl({required UserRepository userRepository})
+      : _userRepository = userRepository;
+
+  @override
+  Future<User?> register(String email, String password) =>
+      _userRepository.register(email, password);
+
+  @override
+  Future<User?> login(String email, String password) =>
+      _userRepository.login(email, password);
+
+  @override
+  Future<void> forgotPassword(String email) =>
+      _userRepository.forgotPassword(email);
+}
