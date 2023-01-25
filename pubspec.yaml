@@ -20,6 +20,7 @@ dependencies:
   validatorless: ^1.2.3
   flutter_overlay_loader: ^2.0.0
   google_sign_in: ^5.4.3
+  font_awesome: ^5.10.1
 
 dev_dependencies:
   flutter_test:
